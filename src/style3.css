@@ -42,4 +42,7 @@ img {
     border-radius: 10px;
     color: #854343;
     text-decoration: none;
+    opacity: 0;
+    transform: scale(.7);
+    transition: .5s ease-in-out;
 }

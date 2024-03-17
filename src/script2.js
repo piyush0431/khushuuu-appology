@@ -37,3 +37,12 @@ leafShadowTl.to('.flower__leaf--first', {filter: 'brightness(1)', duration: 3})
 leafShadowTl.fromTo('.flower__leaf--second', {filter: 'brightness(1)'}, {filter: 'brightness(0.5)', duration: 3})
 leafShadowTl.to('.flower__leaf--second', {filter: 'brightness(1)', duration: 3})
 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    setInterval(() => {
+        const nextPg = document.querySelector('#nextpg');
+        nextPg.style.opacity = '1';
+        nextPg.style.transform = 'scale(1)';
+    }, 3000);
+});

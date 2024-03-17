@@ -10,3 +10,11 @@ document.getElementById('sonaa').onclick = (function () {
         clearTimeout(c);
     }, 1000);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    setInterval(() => {
+        const nextPg = document.querySelector('#sonaa');
+        nextPg.style.opacity = '1';
+        nextPg.style.transform = 'scale(1)';
+    }, 3000);
+});
