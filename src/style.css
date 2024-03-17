@@ -20,6 +20,35 @@ body {
   perspective: 1000px;
 }
 
+.startyy {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000;
+}
+.startyy button {
+  height: 50px;
+  outline: none;
+  border: none;
+  font-size: 1.4rem;
+  width: 100px;
+  border-radius: 10px;
+  background: #6bf0ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "consolas";
+  cursor: pointer;
+  transition: 0.5s ease;
+  color: #248c8c;
+}
+.startyy button:hover {
+  box-shadow: 0 0 10px 2px white;
+}
+
 .night {
   position: fixed;
   left: 50%;
@@ -982,6 +1011,6 @@ body {
     transform: scale(0);
   }
 }
-.not-loaded * {
+.not-loaded:not(.startyy) * {
   animation-play-state: paused !important;
 }/*# sourceMappingURL=style.css.map */
