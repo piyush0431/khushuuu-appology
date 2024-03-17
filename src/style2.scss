@@ -1,0 +1,304 @@
+$green: #80c0a1;
+$yellow: #F5FCCD;
+$brown: #ff7d66;
+$background: #000038;
+$white: #FFF;
+$pink: #eb80b1;
+$dark-blue: #12486B;
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $background;
+    height: 100vh;
+}
+
+.flower {
+    $component-class: &;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    &__sparkles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__sparkle {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background: linear-gradient($white, $yellow);
+        box-shadow: 0 0 20px 10px rgba($white, 0.5);
+        border-radius: 50%;
+
+        &:nth-child(1) {
+            top: 10%;
+            left: 40%;
+        }
+
+        &:nth-child(2) {
+            top: 25%;
+            left: 20%;
+        }
+
+        &:nth-child(3) {
+            top: 40%;
+            left: 30%;
+        }
+
+        &:nth-child(4) {
+            top: 50%;
+            left: 10%;
+        }
+
+        &:nth-child(5) {
+            top: 80%;
+            right: 30%;
+        }
+
+        &:nth-child(6) {
+            top: 70%;
+            left: 20%;
+        }
+
+        &:nth-child(7) {
+            top: 60%;
+            right: 20%;
+        }
+
+        &:nth-child(8) {
+            top: 35%;
+            right: 20%;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        padding: 20vh 40vh;
+        border-radius: 50% 50% 0 0;
+        background: linear-gradient($white -100%, transparent);
+        overflow: hidden;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 4%;
+            left: 4%;
+            display: block;
+            width: 92%;
+            height: 96%;
+            background: radial-gradient(circle at top left, $white -800%, transparent);
+            border-radius: 50% 50% 0 0;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top left, $white -800%, transparent);
+        }
+    }
+
+    &__head {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 20vh;
+        height: 20vh;
+        margin-bottom: -10vh;
+        transform: rotateX(75deg);
+    }
+
+    &__petal {
+        position: absolute;
+        bottom: 40%;
+        width: 20vh;
+        height: 20vh;
+
+        &:after {
+            content: '';
+            position: relative;
+            top: 0rem;
+            left: 60%;
+            display: block;
+            width: 2px;
+            height: 80%;
+            background: $yellow;
+            transform: rotate(45deg);
+        }
+
+        &--left {
+            left: -50%;
+            border-radius: 0 50% 40% 50%;
+            background: linear-gradient(135deg, $yellow, $brown);
+            transform-origin: 100% 100%;
+
+            &:after {
+                left: unset;
+                right: -40%;
+                transform: rotate(135deg);
+            }
+        }
+
+        &--right {
+            right: -50%;
+            border-radius: 50% 0 50% 40%;
+            background: linear-gradient(-135deg, $yellow, $brown);
+            transform-origin: 0 100%;
+        }
+
+        &--front {
+            transform: scaleY(-1);
+        }
+    }
+
+    &__center {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient($brown, $pink);
+        border-radius: 50% 50% 35% 35%;
+    }
+
+    &__seeds {
+        position: absolute;
+        bottom: 2vh;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 3vh;
+    }
+
+    &__seed {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: $white;
+
+        &:nth-child(1) {
+            top: 60%;
+            left: 40%;
+        }
+
+        &:nth-child(2) {
+            top: 40%;
+            left: 60%;
+        }
+
+        &:nth-child(3) {
+            top: 50%;
+            left: 50%;
+        }
+
+        &:nth-child(4) {
+            top: 60%;
+            left: 60%;
+        }
+
+        &:nth-child(5) {
+            top: 40%;
+            left: 40%;
+        }
+
+        &:nth-child(6) {
+            top: 50%;
+            left: 30%;
+        }
+
+        &:nth-child(7) {
+            top: 30%;
+            left: 50%;
+        }
+
+        &:nth-child(8) {
+            top: 70%;
+            left: 50%;
+        }
+
+        &:nth-child(9) {
+            top: 50%;
+            left: 70%;
+        }
+    }
+
+    &__steam-wrapper {
+        position: relative;
+        width: 2.5vh;
+        height: 60vh;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -200%;
+            width: 500%;
+            height: 10vh;
+            border-radius: 0 0 50% 50%;
+            background: linear-gradient($background, $green);
+        }
+    }
+
+    &__leaf {
+        position: absolute;
+        width: 400%;
+        height: 15%;
+        background: $green;
+        border-radius: 50% 0 50% 0;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $green;
+            transform: rotate(-45deg);
+            filter: brightness(1);
+        }
+
+        &--first {
+            bottom: 25%;
+            left: 100%;
+            background: linear-gradient(-135deg, $green, $yellow);
+            transform-origin: -10%;
+        }
+
+        &--second {
+            top: 30%;
+            right: 100%;
+            background: linear-gradient(45deg, $green, $yellow);
+            transform: scaleY(-1);
+            transform-origin: 110%;
+            z-index: 1;
+        }
+    }
+
+    &__steam {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient($background, $green, $yellow);
+        border-radius: 0 0 1rem 0;
+        overflow: hidden;
+    }
+
+    &__steam-end {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 4vh;
+        background: linear-gradient($brown, $yellow);
+        border-radius: 50% 20% 50% 0;
+    }
+}
