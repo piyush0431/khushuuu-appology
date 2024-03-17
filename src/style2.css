@@ -6,6 +6,25 @@ body {
   height: 100vh;
 }
 
+#nextpg {
+  position: fixed;
+  font-family: "Sunshiney", cursive;
+  font-weight: 400;
+  top: 0;
+  right: 0;
+  background: #274cc5;
+  margin: 30px;
+  height: 60px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+}
+
 .flower {
   display: flex;
   flex-direction: column-reverse;
